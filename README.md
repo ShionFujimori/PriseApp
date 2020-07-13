@@ -31,4 +31,4 @@ cd PriseApp
 - Akinori Kimura (University of Toronto '22 | Electrical Engineering)
 - Yibin Long (University of Toronto '22 | Economics, CAS, and Computer Science)
 
-Our project is under the supervision of University of Toronto Entreperneurship Hatchery Program.
+Our project is under the supervision of University of Toronto Entrepreneurship Hatchery Program.
