@@ -13,6 +13,10 @@ These instructions will get you a copy of the project up and running on your loc
 react: 16.13.1
 react-dom: 16.13.1
 react-scripts: 3.4.1
+node-sass: 4.14.1
+@material-ui/core: 4.11.0
+fontsource-roboto: 2.2.3
+prettier: 2.0.5
 ```
 ### Installing
 **Step 1:** Clone this repository to your local computer
