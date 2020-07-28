@@ -1,0 +1,16 @@
+@import "../../assets/main/main";
+
+.nav {
+    margin: 0 20px;
+    .button{
+       font-family: 'Open Sans';
+       font-weight: 600;
+       font-size: 19px;
+       &Start{
+            font-family: 'Open Sans';
+            font-weight: 600;
+            font-size: 19px;
+            color:getColor(blue);
+       }
+    }
+}
