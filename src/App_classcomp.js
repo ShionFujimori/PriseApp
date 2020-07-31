@@ -1,3 +1,6 @@
+// This file is a class component version of App.js
+// Won't use it, save it for the reference
+
 import React from "react";
 
 class App extends React.Component {
