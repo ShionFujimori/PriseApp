@@ -7,7 +7,7 @@ const App = (props) => {
     fetch("http://localhost:4000/posts")
       .then((response) => response.json())
       .then((posts) => setData({ posts: posts }));
-  }, [setData]);
+  }, [data]);
 
   return (
     <div>
