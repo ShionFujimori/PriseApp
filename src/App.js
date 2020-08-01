@@ -14,13 +14,13 @@ const THEME = createMuiTheme({
   },
 });
 
-function App() {
+const App = () => {
   const [state, setState] = useState({ posts: [] });
   useEffect(() => {
     fetch("http://localhost:4000/posts")
       .then((response) => response.json())
       .then((posts) => setState({ posts: posts }));
-  });
+  }, [state]);
 
   return (
     <ThemeProvider theme={THEME}>
@@ -38,6 +38,6 @@ function App() {
       </ul>
     </ThemeProvider>
   );
-}
+};
 
 export default App;
