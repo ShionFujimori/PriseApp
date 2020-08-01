@@ -1,0 +1,59 @@
+@import "../../assets/main/main";
+
+.root{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.top{
+    display: flex;
+    align-items: flex-end;
+    .logo{
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-size: 63px;
+        color: getColor(primary);
+        margin: 0 20px;
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    &Message1{
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 120px;
+        color: getColor(light1);
+        margin-left: 20px;
+    }
+    &Message2{
+        font-family: 'Roboto';
+        font-weight: 900;
+        font-size: 30px;
+        color: getColor(primary);
+        margin-left: 20px;
+        margin-top:-20px;
+    }
+    &Message3{
+        font-family: 'Roboto';
+        font-weight: 900;
+        font-size: 25px;
+        color: grey;
+        margin-left: 20px;
+    }
+}
+
+
+.search{
+    width: 50%;
+    display: flex;
+    margin-left: 20px;
+    .button{
+        margin-left: 16px;
+        background-color: getColor(primary);
+        color: getColor(white);
+    }
+}

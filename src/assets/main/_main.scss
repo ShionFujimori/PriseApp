@@ -1,0 +1,19 @@
+// assets for the color and the fonts
+
+
+// color theme
+$colors: (
+    primary: #12606A,
+    secondary: #12606A,
+    black: #000000,
+    white: #FFFFFF,
+    light1: #DFE2EA,
+    navy: #103D6A,
+    blue: #195CDB,
+    red: #DB2D2D,
+);
+
+// function to access color code
+@function getColor($color) {
+    @return map-get($colors, $color);
+}

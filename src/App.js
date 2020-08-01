@@ -1,19 +1,32 @@
 import React, { useState, useEffect } from "react";
+import HomePage from "./pages/HomePage/HomePage";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import "./App.scss";
+import Typography from "@material-ui/core/Typography";
 
-const App = (props) => {
-  const [data, setData] = useState({ posts: [] });
+const THEME = createMuiTheme({
+  typography: {
+    h1: {
+      fontFamily: "Open Sans",
+      fontWeight: 700,
+      fontSize: 63,
+    },
+  },
+});
 
+function App() {
+  const [state, setState] = useState({ posts: [] });
   useEffect(() => {
     fetch("http://localhost:4000/posts")
       .then((response) => response.json())
-      .then((posts) => setData({ posts: posts }));
-  }, [data]);
+      .then((posts) => setState({ posts: posts }));
+  });
 
   return (
-    <div>
-      <h1>Hello World</h1>
+    <ThemeProvider theme={THEME}>
+      <HomePage />
       <ul>
-        {data.posts.map((post) => {
+        {state.posts.map((post) => {
           return (
             <li>
               <h2>ID: {post.id}</h2>
@@ -23,8 +36,8 @@ const App = (props) => {
           );
         })}
       </ul>
-    </div>
+    </ThemeProvider>
   );
-};
+}
 
 export default App;
