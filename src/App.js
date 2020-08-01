@@ -16,27 +16,27 @@ const THEME = createMuiTheme({
 
 const App = () => {
   const [state, setState] = useState({ posts: [] });
-  useEffect(() => {
-    fetch("http://localhost:4000/posts")
-      .then((response) => response.json())
-      .then((posts) => setState({ posts: posts }));
-  }, [state]);
+  // useEffect(() => {
+  //   fetch("http://localhost:4000/posts")
+  //     .then((response) => response.json())
+  //     .then((posts) => setState({ posts: posts }));
+  // }, [state]);
 
   return (
     <ThemeProvider theme={THEME}>
       <HomePage />
-      <ul>
-        {state.posts.map((post) => {
-          return (
-            <li>
-              <h2>ID: {post.id}</h2>
-              <p>Username: {post.username}</p>
-              <p>Password: {post.password}</p>
-            </li>
-          );
-        })}
-      </ul>
     </ThemeProvider>
+    // <ul>
+    //   // {state.posts.map((post) => {
+    //   //   return (
+    //   //     <li>
+    //   //       <h2>ID: {post.id}</h2>
+    //   //       <p>Username: {post.username}</p>
+    //   //       <p>Password: {post.password}</p>
+    //   //     </li>
+    //   //   );
+    //   // })}
+    // </ul>
   );
 };
 
