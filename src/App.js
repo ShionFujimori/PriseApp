@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link, BrowserRouter, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import "./App.scss";
 import Typography from "@material-ui/core/Typography";
@@ -25,6 +27,7 @@ const App = () => {
   return (
     <ThemeProvider theme={THEME}>
       <HomePage />
+      <ProfilePage />
     </ThemeProvider>
     // <ul>
     //   // {state.posts.map((post) => {
