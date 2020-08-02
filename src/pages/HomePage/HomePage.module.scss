@@ -9,13 +9,17 @@
 
 .top{
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end; 
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 42px;
+    justify-content: space-between;
     .logo{
         font-family: 'Open Sans';
         font-weight: 700;
         font-size: 63px;
         color: getColor(primary);
-        margin: 0 20px;
+
     }
 }
 
@@ -27,33 +31,36 @@
         font-weight: 700;
         font-size: 120px;
         color: getColor(light1);
-        margin-left: 20px;
+        width: 80%;
+        margin: 0 auto;
     }
     &Message2{
         font-family: 'Roboto';
         font-weight: 900;
         font-size: 30px;
         color: getColor(primary);
-        margin-left: 20px;
-        margin-top:-20px;
+        width: 80%;
+        margin: 0 auto;
     }
     &Message3{
         font-family: 'Roboto';
         font-weight: 900;
         font-size: 25px;
         color: grey;
-        margin-left: 20px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .search{
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 97px;
+        .button{
+            margin-left: 16px;
+            background-color: getColor(primary);
+            color: getColor(white);
+        }
     }
 }
 
 
-.search{
-    width: 50%;
-    display: flex;
-    margin-left: 20px;
-    .button{
-        margin-left: 16px;
-        background-color: getColor(primary);
-        color: getColor(white);
-    }
-}

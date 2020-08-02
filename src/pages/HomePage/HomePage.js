@@ -9,14 +9,10 @@ import Button from "@material-ui/core/Button";
 
 const HomePage = () => {
   return (
-    <div className={styles.root}>
-      <Grid container className={styles.top} justify="space-between">
-        <Grid item>
+    <Grid container className={styles.root}>
+      <Grid className={styles.top}>
           <Typography className={styles.logo}>PRISE</Typography>
-        </Grid>
-        <Grid item>
-          <Navbar />
-        </Grid>
+          <Navbar className={styles.navBar}/>
       </Grid>
       <Grid container className={styles.content}>
         <h1 className={styles.contentMessage1}>Sponsorship</h1>
@@ -27,15 +23,15 @@ const HomePage = () => {
           Connects student organizations and companies to sponsorship + branding
           opportunities
         </h1>
-      </Grid>
-      <Grid className={styles.search}>
-        <TextField variant="outlined" />
-        <Button variant="contained" className={styles.button} disableElevation>
-          Try PRISE for free!
-        </Button>
+        <Grid item className={styles.search}>
+          <TextField variant="outlined" />
+          <Button variant="contained" className={styles.button} disableElevation>
+            Try PRISE for free!
+          </Button>
+        </Grid>
       </Grid>
       <Footer />
-    </div>
+    </Grid>
   );
 };
 
