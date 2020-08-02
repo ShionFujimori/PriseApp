@@ -11,8 +11,8 @@ const HomePage = () => {
   return (
     <Grid container className={styles.root}>
       <Grid className={styles.top}>
-          <Typography className={styles.logo}>PRISE</Typography>
-          <Navbar className={styles.navBar}/>
+        <Typography className={styles.logo}>PRISE</Typography>
+        <Navbar className={styles.navBar} />
       </Grid>
       <Grid container className={styles.content}>
         <h1 className={styles.contentMessage1}>Sponsorship</h1>
@@ -25,7 +25,11 @@ const HomePage = () => {
         </h1>
         <Grid item className={styles.search}>
           <TextField variant="outlined" />
-          <Button variant="contained" className={styles.button} disableElevation>
+          <Button
+            variant="contained"
+            className={styles.button}
+            disableElevation
+          >
             Try PRISE for free!
           </Button>
         </Grid>
