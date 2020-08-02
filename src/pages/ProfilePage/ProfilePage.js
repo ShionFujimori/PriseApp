@@ -4,10 +4,12 @@ import ProfileHome from "./ProfileSubPage/ProfileHome";
 import AboutUs from "./ProfileSubPage/AboutUs";
 import Members from "./ProfileSubPage/Members";
 import Campaigns from "./ProfileSubPage/Campaigns";
+import Header from "../../components/Header/Header";
 
 const ProfilePage = (props) => {
   return (
     <HashRouter>
+      <Header />
       <div>
         <h1>PRISE Profile</h1>
         <ul className="header">

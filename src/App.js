@@ -26,8 +26,12 @@ const App = () => {
 
   return (
     <ThemeProvider theme={THEME}>
-      <HomePage />
-      <ProfilePage />
+      <BrowserRouter>
+        <div>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/profile" component={ProfilePage} />
+        </div>
+      </BrowserRouter>
     </ThemeProvider>
     // <ul>
     //   // {state.posts.map((post) => {
