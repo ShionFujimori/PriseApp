@@ -1,0 +1,10 @@
+@import "../../assets/main/main";
+
+.root {
+    @include root;
+}
+
+.top {
+    @include top;
+    width: 80%;
+}

@@ -1,19 +1,16 @@
 import React from "react";
 import styles from "./HomePage.module.scss";
 import Grid from "@material-ui/core/Grid";
-import Navbar from "../../components/Navbar/Navbar";
 import Typography from "@material-ui/core/Typography";
 import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
 const HomePage = () => {
   return (
-    <Grid container className={styles.root}>
-      <Grid className={styles.top}>
-        <Typography className={styles.logo}>PRISE</Typography>
-        <Navbar className={styles.navBar} />
-      </Grid>
+    <div className={styles.root}>
+      <Header />
       <Grid container className={styles.content}>
         <h1 className={styles.contentMessage1}>Sponsorship</h1>
         <h1 className={styles.contentMessage2}>
@@ -35,7 +32,7 @@ const HomePage = () => {
         </Grid>
       </Grid>
       <Footer />
-    </Grid>
+    </div>
   );
 };
 

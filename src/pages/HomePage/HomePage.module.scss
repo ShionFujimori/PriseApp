@@ -1,25 +1,7 @@
 @import "../../assets/main/main";
 
-.root{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-}
-
-.top{
-    display: flex;
-    align-items: flex-end; 
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 42px;
-    justify-content: space-between;
-    .logo{
-        font-family: 'Open Sans';
-        font-weight: 700;
-        font-size: 63px;
-        color: getColor(primary);
-    }
+.root {
+    @include root;
 }
 
 .content{
