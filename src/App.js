@@ -27,10 +27,10 @@ const App = () => {
   return (
     <ThemeProvider theme={THEME}>
       <BrowserRouter>
-          <div>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/profile"  component={ProfilePage} />
-          </div>
+        <div>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/profile" component={ProfilePage} />
+        </div>
       </BrowserRouter>
     </ThemeProvider>
     // <ul>
