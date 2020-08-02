@@ -1,22 +1,11 @@
 @import "../../assets/main/main";
 
-.root{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+.root {
+    @include root;
 }
 
-.top{
-    display: flex;
-    align-items: flex-end;
-    .logo{
-        font-family: 'Open Sans';
-        font-weight: 700;
-        font-size: 63px;
-        color: getColor(primary);
-        margin: 0 20px;
-    }
+.top {
+    @include top;
 }
 
 .content{
