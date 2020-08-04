@@ -20,12 +20,16 @@ const HomePage = () => {
           Connects student organizations and companies to sponsorship + branding
           opportunities
         </h1>
-      </Grid>
-      <Grid className={styles.search}>
-        <TextField variant="outlined" />
-        <Button variant="contained" className={styles.button} disableElevation>
-          Try PRISE for free!
-        </Button>
+        <Grid item className={styles.search}>
+          <TextField variant="outlined" />
+          <Button
+            variant="contained"
+            className={styles.button}
+            disableElevation
+          >
+            Try PRISE for free!
+          </Button>
+        </Grid>
       </Grid>
       <Footer />
     </div>

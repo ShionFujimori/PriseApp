@@ -6,7 +6,7 @@ import Navbar from "../Navbar/Navbar";
 
 const Header = () => {
   return (
-    <Grid container className={styles.top} justify="space-between">
+    <Grid className={styles.top} justify="space-between">
       <Grid item>
         <Typography className={styles.logo}>PRISE</Typography>
       </Grid>
