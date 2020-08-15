@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import { Link, BrowserRouter, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
@@ -22,6 +23,13 @@ const App = () => {
   //   fetch("http://localhost:4000/posts")
   //     .then((response) => response.json())
   //     .then((posts) => setState({ posts: posts }));
+  // }, [state]);
+  //
+  // or
+  //
+  // useEffect(() => {
+  //   axios.get("http://localhost:4000/posts")
+  //     .then(res => {setState({posts: posts})});
   // }, [state]);
 
   return (
