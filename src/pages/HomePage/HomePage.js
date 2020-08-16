@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 import styles from "./HomePage.module.scss";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -9,30 +9,29 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
 const HomePage = () => {
-  const [state, setState] = useState({ email: '' });
+  const [state, setState] = useState({ email: "" });
 
   const handleChange = (event) => {
     setState({ email: event.target.value });
-  }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (state.email === '') {
-        alert('Please enter your email address. (e.g. example@gmail.com)');
-        return;
+    if (state.email === "") {
+      alert("Please enter your email address. (e.g. example@gmail.com)");
+      return;
     }
 
-    const data = { email: state.email }
+    const data = { email: state.email };
 
-    axios.post('http://localhost:4000/create-trial', data)
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
+    axios.post("http://localhost:4000/create-trial", data).then((res) => {
+      console.log(res);
+      console.log(res.data);
     });
 
-    setState({email: ''})
-  }
+    setState({ email: "" });
+  };
 
   return (
     <div className={styles.root}>
@@ -47,17 +46,23 @@ const HomePage = () => {
           opportunities
         </h1>
         <form onSubmit={handleSubmit}>
-            <Grid item className={styles.search}>
-              <TextField variant="outlined" onChange={handleChange} value={state.email} label="Email" placeholder="example@gmail.com" />
-              <Button
-                variant="contained"
-                className={styles.button}
-                type="submit"
-                disableElevation
-              >
-                Try PRISE for free!
-              </Button>
-            </Grid>
+          <Grid item className={styles.search}>
+            <TextField
+              variant="outlined"
+              onChange={handleChange}
+              value={state.email}
+              label="Email"
+              placeholder="example@gmail.com"
+            />
+            <Button
+              variant="contained"
+              className={styles.button}
+              type="submit"
+              disableElevation
+            >
+              Try PRISE for free!
+            </Button>
+          </Grid>
         </form>
       </Grid>
       <Footer />
