@@ -29,7 +29,7 @@ const App = () => {
   //
   // useEffect(() => {
   //   axios.get("http://localhost:4000/posts")
-  //     .then(res => {setState({posts: posts})});
+  //     .then(res => {setState({posts: res.data})});
   // }, [state]);
 
   return (
