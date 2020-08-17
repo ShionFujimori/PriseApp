@@ -18,19 +18,23 @@ const HomePage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    // alert message when the user input is empty
     if (state.email === "") {
       alert("Please enter your email address. (e.g. example@gmail.com)");
       return;
     }
 
     const data = { email: state.email };
-
     axios.post("http://localhost:4000/create-trial", data).then((res) => {
       console.log(res);
       console.log(res.data);
     });
 
+    // when the submission is valid
     setState({ email: "" });
+    alert(
+      "Thank you for entering your email address! A confirmation email is on the way."
+    );
   };
 
   return (
