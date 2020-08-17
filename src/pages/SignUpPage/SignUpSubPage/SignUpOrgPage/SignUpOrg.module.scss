@@ -1,0 +1,27 @@
+@import "../../../../assets/main/main";
+
+.heading {
+    padding-top: 125px;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    .image{
+        margin: 87px 95px;
+    }
+    .detail{
+        display: flex;
+        flex-direction: column;
+        margin: 87px 0;
+        width: 300px;
+        .textField{
+            margin-top: 26px;
+        }
+        .button{
+            margin-top: 58px;
+            @include button;
+        }
+    }
+}
