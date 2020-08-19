@@ -10,8 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import styles from "./ProfilePage.module.scss";
 
-//TODO: make an scss file
-//figure out how to lay buttons on top of each other w/o using div
 const ProfilePage = () => {
     return (
         <div>
