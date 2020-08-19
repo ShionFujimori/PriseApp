@@ -1,0 +1,25 @@
+@import "../../assets/main/main";
+
+.root {
+    @include root;
+}
+
+.top {
+    @include top;
+    width: 80%;
+    .logo{
+        font-family: 'Open Sans';
+        font-weight: 400;
+        margin: 0 185px;
+    }
+    .regText{
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 20px;
+        margin: 0 190px;
+    }
+}
+
+.Profile{
+
+}
