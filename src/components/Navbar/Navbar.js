@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.scss";
 import Link from "@material-ui/core/Link";
-import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
 const Navbar = () => {

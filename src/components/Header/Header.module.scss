@@ -5,6 +5,17 @@
 }
 
 .top {
-    @include top;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+    margin-top: 42px;
+    justify-content: space-between;
     width: 80%;
+    .logo{
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-size: 63px;
+        color: getColor(primary);
+        margin: 0 20px;
+    }
 }
