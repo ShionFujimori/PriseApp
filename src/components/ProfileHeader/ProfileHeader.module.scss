@@ -5,21 +5,23 @@
 }
 
 .top {
-    @include top;
-    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: 14px 70px;
+    -webkit-box-shadow: 0px 15px 30px #262B3414;
+    -moz-box-shadow: 0px 15px 30px #262B3414;
+         box-shadow: 0px 15px 30px #262B3414;
     .logo{
         font-family: 'Open Sans';
-        font-weight: 400;
-        margin: 0 185px;
+        font-weight: 700;
+        font-size: 46px;
+        color: getColor(primary);
     }
-    .regText{
-        font-family: 'Open Sans';
-        font-weight: 600;
-        font-size: 20px;
-        margin: 0 190px;
+    .avatar{
+        color: getColor(white);
+        background-color: getColor(pink);
     }
-}
-
-.Profile{
-
 }

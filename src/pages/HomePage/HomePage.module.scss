@@ -37,9 +37,8 @@
         margin: 0 auto;
         margin-top: 97px;
         .button{
+            @include button;
             margin-left: 16px;
-            background-color: getColor(primary);
-            color: getColor(white);
         }
     }
 }

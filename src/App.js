@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Link, BrowserRouter, Route } from "react-router-dom";
+// import axios from "axios";
+import { BrowserRouter, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import SignUpPage from "./pages/SignUpPage/SignUpPage";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import "./App.scss";
-import Typography from "@material-ui/core/Typography";
 
 const THEME = createMuiTheme({
   typography: {
@@ -14,6 +14,15 @@ const THEME = createMuiTheme({
       fontWeight: 700,
       fontSize: 63,
     },
+    h5: {
+      fontFamily: "Open Sans",
+      fontSize: 29,
+    },
+    h6: {
+      fontFamily: "Open Sans",
+      fontWeight: "SemiBold",
+      fontSize: 29,
+    }
   },
 });
 
@@ -35,10 +44,9 @@ const App = () => {
   return (
     <ThemeProvider theme={THEME}>
       <BrowserRouter>
-        <div>
           <Route path="/" exact component={HomePage} />
           <Route path="/profile" component={ProfilePage} />
-        </div>
+          <Route path="/signup" component={SignUpPage} />
       </BrowserRouter>
     </ThemeProvider>
     // <ul>
