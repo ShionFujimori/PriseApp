@@ -22,7 +22,7 @@ const THEME = createMuiTheme({
       fontFamily: "Open Sans",
       fontWeight: "SemiBold",
       fontSize: 29,
-    }
+    },
   },
 });
 
@@ -44,9 +44,9 @@ const App = () => {
   return (
     <ThemeProvider theme={THEME}>
       <BrowserRouter>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/profile" component={ProfilePage} />
-          <Route path="/signup" component={SignUpPage} />
+        <Route path="/" exact component={HomePage} />
+        <Route path="/profile" component={ProfilePage} />
+        <Route path="/signup" component={SignUpPage} />
       </BrowserRouter>
     </ThemeProvider>
     // <ul>

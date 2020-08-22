@@ -7,7 +7,7 @@ const SignUpPage = () => {
   return (
     <div className={styles.root}>
       <ProfileHeader />
-      <SignUpOrg/>
+      <SignUpOrg />
     </div>
   );
 };
