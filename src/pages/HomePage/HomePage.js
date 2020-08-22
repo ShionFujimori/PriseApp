@@ -9,29 +9,27 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
 const HomePage = () => {
-  const [state, setState] = useState({ email: "" });
+  const [trialEmail, setTrialEmail] = useState({ email: "" });
 
   const handleChange = (event) => {
-    setState({ email: event.target.value });
+    setTrialEmail({ email: event.target.value });
   };
 
+  // TODO: error checking; check if the email address is valid
   const handleSubmit = (event) => {
     event.preventDefault();
-
     // alert message when the user input is empty
-    if (state.email === "") {
-      alert("Please enter your email address. (e.g. example@gmail.com)");
+    if (trialEmail.email === "") {
+      alert("Please enter your email address (e.g. example@gmail.com)");
       return;
     }
-
-    const data = { email: state.email };
+    const data = { email: trialEmail.email };
     axios.post("http://localhost:4000/create-trial", data).then((res) => {
       console.log(res);
       console.log(res.data);
     });
-
     // when the submission is valid
-    setState({ email: "" });
+    setTrialEmail({ email: "" });
     alert(
       "Thank you for entering your email address! A confirmation email is on the way."
     );
@@ -54,7 +52,7 @@ const HomePage = () => {
             <TextField
               variant="outlined"
               onChange={handleChange}
-              value={state.email}
+              value={trialEmail.email}
               label="Email"
               placeholder="example@gmail.com"
             />
