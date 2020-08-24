@@ -4,12 +4,10 @@
     @include root;
 }
 
-.content{
+.container{
     display: flex;
-
-    &LeftBar{
-        background-color: #B8CED0;
-        text-align: left;
+    &Left{
+        width: 200px;
     }
     &MiddleBar{
         .button{
@@ -46,18 +44,13 @@
         font-family: 'Open Sans';
         font-weight: 600;
         font-size: 19px;
-        .circle {
-            position: static;
-            background-color: #DFE2EA;
-            margin: 20px auto;
-            width: 150px;
-            height: 150px;
-            border-radius: 100px;
-          }
-        .company{
-            color: getColor(primary);
-        }
     }
-    
+}
 
+.LeftBar{
+    background-color: getColor(secondary);
+    text-align: left;
+    position: fixed;
+    height: 100vh;
+    width: 250px;
 }
