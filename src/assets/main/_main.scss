@@ -11,12 +11,26 @@ $colors: (
     navy: #103D6A,
     blue: #195CDB,
     red: #DB2D2D,
+    grey: #707070,
 );
+
+$fonts: (
+    primary: 'Open Sans',
+    secondary: 'Roboto',
+);
+
+
 
 // function to access color code
 @function getColor($color) {
     @return map-get($colors, $color);
 }
+
+// function to access different font
+@function getFont($font) {
+    @return map-get($fonts, $font);
+}
+
 
 @mixin root {
     display: flex;

@@ -10,7 +10,7 @@ import Container from '@material-ui/core/Container';
 import styles from "./ProfilePage.module.scss";
 
 import Header from "../../components/Header/Header";
-import ProfileHeader from "../../components/ProfileHeader/ProfileHeader";
+import HeaderExpanded from "../../components/HeaderExpanded/HeaderExpanded";
 import AboutUs from "./ProfileSubPage/AboutUs/AboutUs";
 
 const LeftNavigation = () => {
@@ -121,12 +121,12 @@ const Content = () => {
 const ProfilePage = () => {
     return (
         <div>
-            <ProfileHeader />
+            <HeaderExpanded title="PROFILE" subtitle="Welcome Back John Smith" />
             <Grid container 
                 alignItems="stretch"
                 className={styles.container}
             >
-               {/* <LeftNavigation /> */}
+               <LeftNavigation />
             </Grid>
         </div>
         
