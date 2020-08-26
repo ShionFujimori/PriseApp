@@ -1,24 +1,22 @@
-
 import React from "react";
-import { Drawer, Grid } from "@material-ui/core";
-import List from '@material-ui/core/List';
+import { Grid } from "@material-ui/core";
 import Link from "@material-ui/core/Link";
 import Button from "@material-ui/core/Button";
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import Paper from "@material-ui/core/Paper";
 
 import styles from "./ProfilePage.module.scss";
 
-import Header from "../../components/Header/Header";
 import HeaderExpanded from "../../components/HeaderExpanded/HeaderExpanded";
-import AboutUs from "./ProfileSubPage/AboutUs/AboutUs";
 
 const LeftNavigation = () => {
     return (
             <div className={styles.LeftBar}  >    
-                <Link underline="none">
+                <Link underline="none" className={styles.LeftBarBtn}>
                     <Button 
                     fullWidth="false" 
+                    className={styles.LeftBarBtn}
                     >PROFILE</Button>
                 </Link>
                     
@@ -46,75 +44,114 @@ const LeftNavigation = () => {
     );
 };
 
-const Content = () => {
+const RealContent = ({name, address }) => {
     return (
-        <>
-            {/* Middle Panel */}
-            <Grid item xs={7} >
-            <Container >
-                <h1 
-                className={styles.contentCompanyName}
-                >ABC Consulting Firm</h1>
+        <Paper
+            elevation={3}
+            className={styles.content}
+        >
+            <div className={styles.contentHeader}>
+                <div>
+                    <h1 
+                    className={styles.contentHeaderCompanyName}
+                    >{name}</h1>
+                    <h3
+                    className = {styles.contentHeaderCompanyAddress}>
+                        {address}
+                    </h3>
+                </div>
+                <div>
+                    <Link underline="none">
+                        <Button className={styles.button}>Home</Button>
+                    </Link>
+                    <Link underline="none">
+                        <Button className={styles.button}>About Us</Button>
+                    </Link>
+                    <Link underline="none">
+                        <Button className={styles.button}>Members</Button>
+                    </Link>
+                    <Link underline="none">
+                        <Button className={styles.button}>Campaigns</Button>
+                    </Link>
+                </div>
+            </div>
+            <Typography style={{ backgroundColor: '#cfe8fc', height: '25vh' }} />
+            <Grid container className={styles.info}>
+                <Grid item xs={2} className={styles.infoLink}>
+                    <Link underline="none">
+                        <Button fullWidth="true"
+                        className={styles.button}>Home</Button>
+                    </Link>
+                    <Link underline="none">
+                        <Button fullWidth="true"
+                        className={styles.button}>Mission Statement</Button>
+                    </Link>
+                    <Link underline="none">
+                        <Button fullWidth="true"
+                        className={styles.button}>Vision</Button>
+                    </Link>
+                    <Link underline="none">
+                        <Button fullWidth="true"
+                        className={styles.button}>Members</Button>
+                    </Link>
+                    <Link underline="none">
+                        <Button fullWidth="true"
+                        className={styles.button}>Company</Button>
+                    </Link>
 
-                <h3
-                className = {styles.contentCompanyAddress}>
-                    www.home.com    Toronto, Ontario  CANADA
-                </h3>
-                
-                <Typography style={{ backgroundColor: '#cfe8fc', height: '25vh' }} />
-            </Container>
+                </Grid>
+                <Grid item xs={10}>
+                    <h1>MISSION</h1>
+                    <p>Here is the mission statement</p>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+
+                    <h2>VISION</h2>
+                        <hr></hr>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                        <hr></hr>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                        <hr></hr>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+
+                    <h2>Members</h2>
+                    <Grid container>
+                        <Grid item xs={4}>
+                            <div className={styles.circle}></div>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <div className={styles.circle}></div>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <div className={styles.circle}></div>
+                        </Grid>
+                    </Grid>
+
+                    <br></br>
+                    <br></br>
+                    <br></br>
+
+                    <h2>Organization</h2>
+                    
+                    <h3 className={styles.company}>ABC Consulting Firm</h3>
+                    <br></br>
+                    <p>Toronto, Ontario</p>
+                    <br></br>
+                    <p>www.home.com</p>
+                    <br></br>
+                    <p>Founded in 2016</p>
+                </Grid>
             </Grid>
-
-            {/* Right Panel*/}
-            <Grid item xs={4} className={styles.contentRightBar}>
-                <Link underline="none">
-                    <Button className={styles.button}>Home</Button>
-                </Link>
-                <Link underline="none">
-                    <Button className={styles.button}>About Us</Button>
-                </Link>
-                <Link underline="none">
-                    <Button className={styles.button}>Members</Button>
-                </Link>
-                <Link underline="none">
-                    <Button className={styles.button}>Campaigns</Button>
-                </Link>
-            </Grid>
-
-            {/* Left Panel 2 (empty) */}
-            <Grid item xs={1}>
-            </Grid>  
-
-            {/* Middle Panel 2a Buttons */}
-            <Grid item xs={2} className={styles.contentMiddleBar}>
-                <Link underline="none">
-                    <Button fullWidth="true"
-                    className={styles.button}>Home</Button>
-                </Link>
-                <Link underline="none">
-                    <Button fullWidth="true"
-                    className={styles.button}>Mission Statement</Button>
-                </Link>
-                <Link underline="none">
-                    <Button fullWidth="true"
-                    className={styles.button}>Vision</Button>
-                </Link>
-                <Link underline="none">
-                    <Button fullWidth="true"
-                    className={styles.button}>Members</Button>
-                </Link>
-                <Link underline="none">
-                    <Button fullWidth="true"
-                    className={styles.button}>Company</Button>
-                </Link>
-
-            </Grid>
-
-            {/* Middle Panel 2b Buttons*/}
-            <Grid item xs={5} sm={5} className={styles.contentMiddleText}>
-                
-            </Grid>
-        </>
+        </Paper>
     );
 };
 
@@ -122,11 +159,19 @@ const ProfilePage = () => {
     return (
         <div>
             <HeaderExpanded title="PROFILE" subtitle="Welcome Back John Smith" />
+
             <Grid container 
                 alignItems="stretch"
                 className={styles.container}
             >
-               <LeftNavigation />
+                <Grid item xs={2}>
+                    <LeftNavigation />
+                </Grid>
+                <Grid container justify="center" xs={10}>
+                    <Grid item xs={11}>
+                        <RealContent name="KPMG" address="www.home.com    Toronto, Ontario  CANADA" />
+                    </Grid>
+                </Grid>
             </Grid>
         </div>
         
