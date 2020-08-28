@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link, BrowserRouter, Route } from "react-router-dom";
+import {  BrowserRouter, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
-import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import "./App.scss";
-import Typography from "@material-ui/core/Typography";
+import UserPage from "./pages/UserPage/UserPage";
+import ProfileHome from "./pages/ProfilePage/ProfileSubPage/ProfileHome/ProfileHome";
 
 const THEME = createMuiTheme({
   typography: {
@@ -29,7 +29,15 @@ const App = () => {
       <BrowserRouter>
         <div>
           <Route path="/" exact component={HomePage} />
-          <Route path="/profile" component={ProfilePage} />
+          <Route path="/profile">
+            <UserPage pageType="PROFILE" message="Hello, John Smith">
+              <ProfileHome organization="KPMG" address="www.home.com    Toronto, Ontario  CANADA"/>
+            </UserPage>
+          </Route>
+          <Route path="/dashboard">
+            <UserPage pageType="DASHBOARD" message="Hello, John Smith">
+            </UserPage>
+          </Route>
         </div>
       </BrowserRouter>
     </ThemeProvider>

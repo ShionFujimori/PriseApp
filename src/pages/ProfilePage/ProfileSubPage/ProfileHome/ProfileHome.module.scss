@@ -1,0 +1,29 @@
+@import "../../../../assets/main/main";
+
+.content{
+  &Header{
+      display: flex;
+      justify-content: space-between;
+      margin: 0 40px;
+      margin-bottom: 20px;
+      &CompanyName{
+          font-family: 'Roboto';
+          font-weight: 700;
+          font-size: 30px;
+          color: getColor(primary);
+      }
+      &CompanyAddress{
+          font-family: 'Roboto';
+          font-weight: 600;
+          font-size: 15px;
+          color: getColor(primary);
+      }
+      .info{
+          &Link{
+              font-family: 'Open Sans';
+              font-weight: 600;
+              font-size: 19px;
+          }
+      }
+  }
+}

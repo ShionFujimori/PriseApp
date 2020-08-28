@@ -6,6 +6,7 @@ import Avatar from "@material-ui/core/Avatar";
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import EmailIcon from '@material-ui/icons/Email';
 
+
 const HeaderExpanded = ({title, subtitle}) => {
   return (
     <Grid className={styles.top}>
