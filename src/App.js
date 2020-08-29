@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import axios from "axios";
-import {  BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import "./App.scss";
@@ -50,12 +50,17 @@ const App = () => {
           <Route path="/signup" component={SignUpPage} />
           <Route path="/profile">
             <UserPage pageType="PROFILE" message="Hello, John Smith">
-              <ProfileHome organization="KPMG" address="www.home.com    Toronto, Ontario  CANADA"/>
+              <ProfileHome
+                organization="KPMG"
+                address="www.home.com    Toronto, Ontario  CANADA"
+              />
             </UserPage>
           </Route>
           <Route path="/dashboard">
-            <UserPage pageType="DASHBOARD" message="Hello, John Smith">
-            </UserPage>
+            <UserPage
+              pageType="DASHBOARD"
+              message="Hello, John Smith"
+            ></UserPage>
           </Route>
         </div>
       </BrowserRouter>
