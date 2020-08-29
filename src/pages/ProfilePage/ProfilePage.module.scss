@@ -4,60 +4,86 @@
     @include root;
 }
 
-.content{
-    display: flex;
-
-    &LeftBar{
-        background-color: #B8CED0;
-        text-align: left;
-    }
-    &MiddleBar{
-        .button{
-            font-family: 'Open Sans';
-            font-weight: 600;
-            font-size: 17px;
-        }
-    }
-    &RightBar{
+// .container{
+//     display: flex;
+//     &Left{
+//         width: 200px;
+//     }
+//     &MiddleBar{
+//         .button{
+//             font-family: 'Open Sans';
+//             font-weight: 600;
+//             font-size: 17px;
+//         }
+//     }
+//     &RightBar{
         
-        .button{
-            font-family: 'Open Sans';
-            font-weight: 600;
-            font-size: 19px;
-        }
+//         .button{
+//             font-family: 'Open Sans';
+//             font-weight: 600;
+//             font-size: 19px;
+//         }
+//     }
+//     &CompanyName{
+//         font-family: 'Roboto';
+//         font-weight: 700;
+//         font-size: 30px;
+//         text-align: center;
+//         justify-content: center;
+//         color: getColor(primary);
+//     }
+//     &CompanyAddress{
+//         font-family: 'Roboto';
+//         font-weight: 600;
+//         font-size: 15px;
+//         text-align: center;
+//         justify-content: center;
+//         color: getColor(primary);
+//     }
+//     &MiddleText{
+//         font-family: 'Open Sans';
+//         font-weight: 600;
+//         font-size: 19px;
+//     }
+// }
+
+.LeftBar{
+    background-color: getColor(secondary);
+    text-align: left;
+    height: 100vh;
+    width: auto;
+    &Btn{
+        border-radius: 100px;
     }
-    &CompanyName{
-        font-family: 'Roboto';
-        font-weight: 700;
-        font-size: 30px;
-        text-align: center;
-        justify-content: center;
-        color: getColor(primary);
-    }
-    &CompanyAddress{
-        font-family: 'Roboto';
-        font-weight: 600;
-        font-size: 15px;
-        text-align: center;
-        justify-content: center;
-        color: getColor(primary);
-    }
-    &MiddleText{
-        font-family: 'Open Sans';
-        font-weight: 600;
-        font-size: 19px;
-        .circle {
-            position: static;
-            background-color: #DFE2EA;
-            margin: 20px auto;
-            width: 150px;
-            height: 150px;
-            border-radius: 100px;
-          }
-        .company{
+}
+
+.content{
+    margin-top: 25px;
+    padding-top: 20px;
+    min-height: 100vh;
+    &Header{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 40px;
+        margin-bottom: 20px;
+        &CompanyName{
+            font-family: 'Roboto';
+            font-weight: 700;
+            font-size: 30px;
             color: getColor(primary);
         }
+        &CompanyAddress{
+            font-family: 'Roboto';
+            font-weight: 600;
+            font-size: 15px;
+            color: getColor(primary);
+        }
+        .info{
+            &Link{
+                font-family: 'Open Sans';
+                font-weight: 600;
+                font-size: 19px;
+            }
+        }
     }
-    
-
 }

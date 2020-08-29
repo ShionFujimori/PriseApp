@@ -1,0 +1,59 @@
+@import "../../assets/main/main";
+
+.root {
+    @include root;
+}
+
+.top {
+    width: auto;
+    padding: 30px 70px;
+    -webkit-box-shadow: 0px 15px 30px #262B3414;
+    -moz-box-shadow: 0px 15px 30px #262B3414;
+         box-shadow: 0px 15px 30px #262B3414;
+         
+    .header{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            font-family: 'Open Sans';
+            font-weight: 700;
+            font-size: 26px;
+            color: getColor(primary);
+        }
+        .icons {
+            display: flex;
+            .bell {
+                margin: 0 12.5px;
+                color: getColor(primary);
+            }
+            .mail {
+                margin: 0 12.5px;
+                color: getColor(primary);
+            }
+            .avatar{
+                color: getColor(white);
+                background-color: getColor(pink);
+                margin: 0 12.5px;
+            }
+        }   
+    }
+    .expanded{
+        &Title{
+            color: getColor(primary);
+            font-family: getFont(secondary);
+            font-size: 50px;
+            font-weight: 100;
+            padding: 0 230px;
+        }
+        &Subtitle{
+            color: getColor(grey);
+            font-family: getFont(secondary);
+            font-size: 19px;
+            padding: 0 230px;
+            padding-top: 5px;
+            padding-bottom: 50px;
+        }
+    }
+}

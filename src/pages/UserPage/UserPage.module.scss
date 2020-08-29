@@ -1,0 +1,21 @@
+@import "../../assets/main/main";
+
+.root {
+    @include root;
+}
+
+.LeftBar{
+    background-color: getColor(secondary);
+    text-align: left;
+    height: 100vh;
+    width: auto;
+    &Btn{
+        border-radius: 100px;
+    }
+}
+
+.content{
+    margin-top: 25px;
+    padding-top: 20px;
+    min-height: 100vh;
+}
