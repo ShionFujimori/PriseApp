@@ -13,13 +13,10 @@ const Navbar = () => {
         <Button className={styles.button}>How It Works</Button>
       </Link>
       <Link underline="none">
-        <Button className={styles.button}>Sponsors</Button>
+        <Button className={styles.button}>Support</Button>
       </Link>
       <Link underline="none">
-        <Button className={styles.button}>Pricings</Button>
-      </Link>
-      <Link underline="none">
-        <Button className={styles.buttonStart}>Get started</Button>
+        <Button className={styles.button}>Pricing</Button>
       </Link>
     </nav>
   );

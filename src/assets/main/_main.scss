@@ -1,3 +1,4 @@
+@import "./layout";
 // assets for the color and the fonts
 
 
@@ -19,7 +20,18 @@ $fonts: (
     secondary: 'Roboto',
 );
 
+$font-sizes: (
+    xl: 90px,
+    lg: 64px,
+    md: 32px,
+    sm: 24px,
+    xs: 16px,
+);
 
+
+@function size($size) {
+    @return map-get($font-sizes, $size); //(name of map, key)
+}
 
 // function to access color code
 @function getColor($color) {
@@ -41,6 +53,12 @@ $fonts: (
 }
 
 @mixin button {
-    background-color: getColor(primary);
-    color: getColor(white);
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-size: 16px;
+    @include responsive("lg-up"){
+        padding: 15px 50px;
+    }
+    //background-color: getColor(primary);
+    //color: getColor(white);
 }
