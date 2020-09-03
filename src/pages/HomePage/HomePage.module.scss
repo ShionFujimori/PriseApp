@@ -1,4 +1,5 @@
 @import "../../assets/main/main";
+@import "../../assets/main/layout";
 
 .root {
     @include root;
@@ -8,25 +9,42 @@
     display: flex;
     flex-direction: column;
     &Message1{
+        @include responsive("lg-up"){
+            font-size: size(lg);
+        }
+        @include responsive("xl-up"){
+            font-size: size(xl);
+        }
         font-family: 'Roboto';
         font-weight: 700;
-        font-size: 120px;
-        color: getColor(light1);
+        color: getColor(black);
         width: 80%;
         margin: 0 auto;
     }
     &Message2{
+        @include responsive("lg-up"){
+            font-size: size(sm);
+        }
+        @include responsive("xl-up"){
+            font-size: size(md);
+        }
         font-family: 'Roboto';
-        font-weight: 900;
-        font-size: 30px;
+        font-weight:400;
+        font-size: size(xs);
         color: getColor(primary);
         width: 80%;
         margin: 0 auto;
     }
     &Message3{
+        @include responsive("lg-up"){
+            font-size: size(sm);
+        }
+        @include responsive("xl-up"){
+            font-size: size(md);
+        }
         font-family: 'Roboto';
-        font-weight: 900;
-        font-size: 25px;
+        font-weight: 400;
+        font-size: size(xs);
         color: grey;
         width: 80%;
         margin: 0 auto;
