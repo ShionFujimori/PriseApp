@@ -1,0 +1,28 @@
+@import "../../assets/main/main";
+
+.root {
+    @include root;
+}
+
+.content{
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: 'Roboto';
+    &SearchHeader{
+        font-size: 20px;
+        padding-top: 25px
+    }
+    
+}
+
+.result{
+    padding-top: 25px
+}
+
+.circle {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-color: #68A0D8;
+    display: inline-block;
+}
