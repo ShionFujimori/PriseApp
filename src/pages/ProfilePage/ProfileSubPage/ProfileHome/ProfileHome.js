@@ -27,7 +27,7 @@ const ProfileHome = ({ organization, address }) => {
           <Link underline="none">
             <Button className={styles.button}>Campaigns</Button>
           </Link>
-        </div>
+        </div>  
       </div>
       <Typography style={{ backgroundColor: "#cfe8fc", height: "25vh" }} />
       <Grid container className={styles.info}>
@@ -109,7 +109,7 @@ const ProfileHome = ({ organization, address }) => {
           <p>Founded in 2016</p>
         </Grid>
       </Grid>
-    </>
+    </> 
   );
 };
 

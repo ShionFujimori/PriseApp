@@ -7,6 +7,7 @@ import "./App.scss";
 import UserPage from "./pages/UserPage/UserPage";
 import SignUpPage from "./pages/SignUpPage/SignUpPage";
 import ProfileHome from "./pages/ProfilePage/ProfileSubPage/ProfileHome/ProfileHome";
+import SearchPage from "./pages/SearchPage/SearchPage";
 
 const THEME = createMuiTheme({
   typography: {
@@ -48,6 +49,12 @@ const App = () => {
         <div>
           <Route path="/" exact component={HomePage} />
           <Route path="/signup" component={SignUpPage} />
+          <Route path="/search">
+            <UserPage pageType="SEARCH" message="Hello, John Smith">
+              <SearchPage></SearchPage>
+            </UserPage> 
+          </Route>
+
           <Route path="/profile">
             <UserPage pageType="PROFILE" message="Hello, John Smith">
               <ProfileHome
